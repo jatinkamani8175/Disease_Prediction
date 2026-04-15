@@ -248,7 +248,7 @@ def render_sidebar() -> None:
         else:
             nav_options = ["🔑 Login", "📝 Register"]
 
-        choice = st.radio("Navigation", nav_options, label_visibility="collapsed")
+        choice = st.segmented_control("Navigation", nav_options, label_visibility="collapsed")
 
         if choice == "🔬 Predict Disease":
             st.session_state.active_page = "Predict"
